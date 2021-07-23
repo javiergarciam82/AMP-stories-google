@@ -1,0 +1,286 @@
+<!doctype html>
+<html ⚡>
+  <head>
+    <meta charset="utf-8">
+    <title>KienyKe</title>
+    <link rel="canonical" href="kienyke.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+      <noscript>
+        <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+      </noscript>
+      <script async src="https://cdn.ampproject.org/v0.js"></script>
+      <link rel="canonical" href="https://amp.dev/documentation/examples/components/amp-social-share/index.html">
+      <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-1.0.js"></script>
+      <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+      <script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
+      <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+      <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+      <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <style amp-custom>
+
+    /* a custom sharing icon */
+    amp-social-share.custom-style {
+      background-color: #008080;
+      background-image: url('https://raw.githubusercontent.com/google/material-design-icons/master/social/1x_web/ic_share_white_48dp.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    /* blue icons with rounded corners  */
+    amp-social-share.rounded {
+      border-radius: 50%;
+      background-size: 60%;
+      color: var(--color-text-light);
+      background-color: var(--color-primary);
+    }
+
+
+      amp-story {
+        font-family: 'Oswald',sans-serif;
+        color: #fff;
+      }
+      amp-story-page {
+        background-color: #000;
+        font-family: 'Oswald',sans-serif;
+      }
+      h1 {
+        font-weight: bold;
+        font-size: 2.875em;
+        font-weight: normal;
+        line-height: 1.174;
+      }
+      p {
+          font-weight: 300;
+          font-size: 1.0em;
+          line-height: 1.5em;
+          color: #fff;
+          font-family: 'Open Sans', sans-serif;
+      }
+      q {
+        font-weight: 300;
+        font-size: 1.1em;
+      }
+      amp-story-grid-layer.bottom {
+        align-content:end;
+      }
+      amp-story-grid-layer.noedge {
+        padding: 0px;
+      }
+      amp-story-grid-layer.center-text {
+        align-content: center;
+      }
+
+      amp-story-cta-layer {
+        display: block!important;
+        top: 80%!important;
+        margin: 0!important;
+        z-index: 3!important;
+      }
+
+      amp-story-cta-layer {
+        text-align: center;
+      }
+      .wrapper {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+      }
+      .banner-text {
+        text-align: center;
+        background-color: #000;
+        line-height: 2em;
+      }
+
+      .logo{
+        justify-self: center;
+      }
+      .date {
+        font-size: 13px;
+        opacity: 0.8;
+        text-shadow: none;
+        display: inline-block;
+        margin-left: 10px;
+      }
+      .byline{
+          padding: 0 0 10px;
+          text-transform: uppercase;
+          font-weight: normal;
+          font-size: 13px;
+          display: inline-block;
+          color: #AAAAAA;
+      }
+        .blur img{
+          filter: blur(2px);
+        }
+
+      .text-slide{
+        align-content: center;
+      }
+      .borderless {
+        padding:0;
+      }
+      p.credit {
+      color: rgba(222, 222, 222, 0.8);
+      font-size: 10px;
+      padding: 0 5px 5px 0;
+      text-transform: uppercase;
+      font-family: 'Open Sans', sans-serif;
+      text-align: right;
+      }
+
+      .text-slide--background {
+          background-color: rgba(0, 0, 0, 0.5);
+      }
+
+  amp-story-cta-layer a.button {
+    display: inline-block;
+    background-color: white;
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+    text-align: center;
+    padding: 13px 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+    font-size: 16px;
+    line-height: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    </style>
+  </head>
+  <body>
+  <amp-story standalone>
+        <!-- Cover page -->
+        <amp-story-page id="slide_0" >
+          <amp-story-grid-layer template="fill">
+                    <amp-img src="assets/01.jpeg"width="1080"height="1920"></amp-img>
+          </amp-story-grid-layer>
+            <amp-story-grid-layer class="logo-layer top" template="vertical">
+              <amp-img class="logo" src="https://www.kienyke.com/themes/custom/kyk_bootstrap_sass/assets/logo-blacno.svg" width="500"height="50"></amp-img>
+            </amp-story-grid-layer>
+
+        <!-- texto story -->
+            <amp-story-grid-layer template="vertical" class="gradient--bottom bottom"> 
+                <div>
+                    <p class="tagline"><span>Your 5-Minute Fix</span></p>
+                    <h1>What is Lorem Ipsum?</h1>
+                    <p class="byline">By Amber Phillips<span class="date">| April 13, 2018</span></p>
+                </div>  
+            </amp-story-grid-layer>
+        <!-- texto story -->    
+        </amp-story-page>
+        <!-- Cover page -->
+
+
+         <!-- Page 1 -->
+        <amp-story-page id="slide_1" >
+              <amp-story-grid-layer template="fill">
+                  <amp-img src="assets/01.jpeg"width="1080"height="1920"class="blur"></amp-img>
+              </amp-story-grid-layer>
+              <amp-story-grid-layer template="fill" class="text-slide--background"></amp-story-grid-layer>
+              <amp-story-grid-layer template="vertical" class="text-slide"> 
+                <p>
+                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
+                </p> 
+              </amp-story-grid-layer>
+              <amp-story-grid-layer template="vertical" class="borderless bottom">
+                <p class="credit">Cover:Photo Illustration; Michael Robinson Chavez</p>
+              </amp-story-grid-layer>
+        </amp-story-page>
+         <!-- Page 1 -->
+
+
+
+         <!-- Page 2 -->
+        <amp-story-page id="slide_2" >
+          <amp-story-grid-layer template="fill"><amp-img src="assets/02.jpeg" width="1080" height="1920"></amp-img></amp-story-grid-layer>
+              <amp-story-grid-layer template="vertical"class="gradient--bottom bottom text-slide"> 
+            <h2>1. What is Lorem Ipsum?</h2>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+             </amp-story-grid-layer>
+            <amp-story-grid-layer template="vertical" class="borderless bottom">
+                <p class="credit">Cover:Photo Illustration; Michael Robinson Chavez</p>
+            </amp-story-grid-layer>
+        </amp-story-page>
+         <!-- Page 2 -->
+
+
+         <!-- Page 3 Video Instagram -->  
+        <amp-story-page id="slide_3" >  
+            <amp-instagram data-shortcode="CQcUp4qJP3o" width="1" height="1" layout="responsive"></amp-instagram>
+        </amp-story-page>
+         <!-- Page 3 Video Instagram -->  
+
+
+         <!-- Page 4 Video  Youtube-->  
+        <amp-story-page id="slide_4" >  
+            <amp-youtube id="my-youtube-video" width="480" height="270" layout="responsive" data-videoid="KLqXZU0Lvu4" autoplay></amp-youtube>
+        </amp-story-page>
+
+
+          <!-- Page 4 Video  Youtube-->  
+
+
+         <!-- Page Video local -->  
+        <amp-story-page id="slide_5"  auto-advance-after="slide_5-video">
+          <amp-story-grid-layer template="fill">
+           <amp-video  autoplay width="1080" height="1920" poster="assets/04.jpeg" id="slide_5-video">
+                  <source type="application/x-mpegurl" src="https://videos.posttv.com/washpost-production/TWP/20180413/5ad0e34ae4b0a84419317130/5ad0e357e4b0582275ee05de_t_1523639133766_mobile.m3u8">
+                  <source type="video/mp4" src="https://videos.posttv.com/washpost-production/TWP/20180413/5ad0e34ae4b0a84419317130/5ad0e357e4b0582275ee05de_1439414158689-7n0w0k_t_1523639133408_360_640_600.mp4">
+                  <track kind="captions" srclang="en" default src="https://www.washingtonpost.com/graphics/2018/national/amp-stories/the-5-biggest-political-headlines-facebook-and-paul-ryan/captions/caption-1.vtt">
+              <div fallback>
+                <p>This browser does not support the video element.</p>
+              </div>
+            </amp-video>
+          </amp-story-grid-layer>
+        </amp-story-page>
+         <!-- Page Video local --> 
+
+         <!-- Page 5 -->
+        <amp-story-page id="slide_6" >
+          <amp-story-grid-layer template="fill"><amp-img src="assets/03.jpeg" width="1080" height="1920"></amp-img></amp-story-grid-layer>
+          <amp-story-cta-layer class="i-amphtml-element i-amphtml-layout-container i-amphtml-story-layer i-amphtml-built i-amphtml-layout" i-amphtml-layout="container">
+        <a href="#" class="button" target="_blank" role="link" i-amphtml-orig-tabindex="0" data-vars-story-page-id="slide_12" data-vars-story-page-index="12" tabindex="0">Regístrese para recibir el boletín</a>
+          </amp-story-cta-layer>
+            <amp-story-grid-layer template="vertical" class="borderless bottom">
+                <p class="credit">Cover:Photo Illustration; Michael Robinson Chavez</p>
+            </amp-story-grid-layer>
+        </amp-story-page>
+         <!-- Page 5 -->
+        <!-- Bookend -->
+<!--   <amp-story-bookend src="bookendv1.json" layout="nodisplay"></amp-story-bookend>
+  <amp-story-social-share src="bookendv1.json" layout="nodisplay"></amp-story-social-share> -->
+
+   <!-- Share -->
+  <amp-story-social-share>
+  <script type="application/json">
+    {
+      "shareProviders": [
+        "email",
+        {"provider": "facebook", "app_id": "41245586762"},
+        {"provider": "twitter", "text": "What you missed this week in Washington"},
+        "whatsapp"
+      ]
+    }
+  </script>
+</amp-story-social-share>
+
+
+    </amp-story>
+  </body>
+
+</html>
